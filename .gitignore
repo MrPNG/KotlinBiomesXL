@@ -1,0 +1,19 @@
+#Gradle
+.gradle/
+build/
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# IntelliJ IDEA
+.idea/
+out/
+*.iml
+*.iws
+*.ipr
+
+# Minecraft
+run/

@@ -1,0 +1,25 @@
+{
+    "schemaVersion": 1,
+    "id": "@mod.id@",
+    "version": "@mod.version@",
+    "name": "@mod.name@",
+    "description": "@mod.description@",
+    "icon": "assets/@mod.id@/icon.png",
+    "authors": [
+        "@mod.author@"
+    ],
+    "license": "MIT",
+    "entrypoints": {
+        "main": [
+            {
+                "adapter": "kotlin",
+                "value": "@mod.entrypoint@"
+            }
+        ]
+    },
+    "requires": {
+        "minecraft": "1.15.2",
+        "fabricloader": ">=0.7.1",
+        "fabric-language-kotlin": ">=1.3.60"
+    }
+}
