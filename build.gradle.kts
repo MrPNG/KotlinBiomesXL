@@ -58,9 +58,3 @@ tasks.shadowJar {
 	archiveClassifier.set("")
 	archiveVersion.set("")
 }
-
-tasks.create("deleteWorldsAndRunClient") {
-	File("./run/saves").listFiles()?.forEach { it.deleteRecursively() }
-	
-	finalizedBy(tasks["runClient"])
-}

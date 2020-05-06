@@ -1,5 +1,6 @@
 package me.mrpingu.kotlinbiomesxl.world.biome
 
+import me.mrpingu.kotlinbiomesxl.entity.ModEntities.PENGUIN
 import me.mrpingu.kotlinbiomesxl.world.gen.feature.SnowTopLayerFeature
 import me.mrpingu.kotlinbiomesxl.world.gen.surfacebuilder.GlacierSurfaceBuilder
 import net.minecraft.block.Blocks.*
@@ -7,12 +8,12 @@ import net.minecraft.entity.EntityType.*
 import net.minecraft.world.biome.Biome.Category.*
 import net.minecraft.world.biome.DefaultBiomeFeatures.*
 import net.minecraft.world.gen.GenerationStep.Feature.*
-import net.minecraft.world.gen.decorator.*
+import net.minecraft.world.gen.decorator.ChanceDecoratorConfig
 import net.minecraft.world.gen.decorator.Decorator.*
+import net.minecraft.world.gen.decorator.RangeDecoratorConfig
 import net.minecraft.world.gen.feature.FeatureConfig.*
 import net.minecraft.world.gen.feature.MineshaftFeature.*
 import net.minecraft.world.gen.feature.SingleStateFeatureConfig
-import net.minecraft.world.gen.surfacebuilder.SurfaceBuilder
 import net.minecraft.world.gen.surfacebuilder.TernarySurfaceConfig
 
 object GlacierBiome: ModBiome(
@@ -43,6 +44,8 @@ object GlacierBiome: ModBiome(
 		addStructureFeature(STRONGHOLD.configure(DEFAULT))
 		
 		addAmbient(BAT, 10, 8, 8)
+		
+		//addCreature(PENGUIN, 1, 4, 8)
 		
 		addMonster(CREEPER, 100, 4, 4)
 		addMonster(ENDERMAN, 10, 1, 4)

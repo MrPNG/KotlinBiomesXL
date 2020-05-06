@@ -1,5 +1,6 @@
 package me.mrpingu.kotlinbiomesxl.world.biome
 
+import me.mrpingu.kotlinbiomesxl.entity.ModEntities.PENGUIN
 import me.mrpingu.kotlinbiomesxl.extension.WeightedBlockStateProvider
 import net.minecraft.block.Blocks.*
 import net.minecraft.entity.EntityType.*
@@ -55,7 +56,7 @@ object MeadowBiome: ModBiome(
 		addStructureFeature(STRONGHOLD.configure(DEFAULT))
 		
 		addFeature(VEGETAL_DECORATION, RANDOM_PATCH.configure(GRASS_CONFIG).createDecoratedFeature(COUNT_HEIGHTMAP_DOUBLE.configure(CountDecoratorConfig(16))))
-		addFeature(VEGETAL_DECORATION, FLOWER.configure(flowerConfig).createDecoratedFeature(COUNT_HEIGHTMAP_32.configure(CountDecoratorConfig(16))))
+		addFeature(VEGETAL_DECORATION, FLOWER.configure(flowerConfig).createDecoratedFeature(COUNT_HEIGHTMAP_32.configure(CountDecoratorConfig(64))))
 		
 		addAmbient(BAT, 10, 8, 8)
 		

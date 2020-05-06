@@ -32,7 +32,7 @@ object ModBiomes: ModRegistry<Biome>(BIOME) {
 		)
 		
 		addContinentalBiome(GlacierBiome, SNOWY, 1000.0)
-		addContinentalBiome(MeadowBiome, TEMPERATE, 1.0)
+		addContinentalBiome(MeadowBiome, TEMPERATE, 1000.0)
 		
 		addShoreBiome(GlacierBiome, GlacierShoreBiome, 65536.0)
 		

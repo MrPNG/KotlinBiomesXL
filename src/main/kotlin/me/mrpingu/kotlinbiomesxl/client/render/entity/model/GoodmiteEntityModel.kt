@@ -1,15 +1,15 @@
 package me.mrpingu.kotlinbiomesxl.client.render.entity.model
 
+import me.mrpingu.kotlinbiomesxl.entity.GoodmiteEntity
 import net.fabricmc.api.*
 import net.minecraft.client.model.ModelPart
 import net.minecraft.client.render.entity.model.CompositeEntityModel
-import net.minecraft.entity.mob.EndermiteEntity
 import net.minecraft.util.math.MathHelper
 import kotlin.math.PI
 import kotlin.math.abs
 
 @Environment(EnvType.CLIENT)
-object EndermiteEntityModel: CompositeEntityModel<EndermiteEntity>() {
+object GoodmiteEntityModel: CompositeEntityModel<GoodmiteEntity>() {
 	
 	private val cuboids = arrayOf(intArrayOf(4, 3, 2), intArrayOf(6, 4, 5), intArrayOf(3, 3, 1), intArrayOf(1, 2, 1))
 	private val textures = arrayOf(intArrayOf(0, 0), intArrayOf(0, 5), intArrayOf(0, 14), intArrayOf(0, 18))
@@ -28,7 +28,7 @@ object EndermiteEntityModel: CompositeEntityModel<EndermiteEntity>() {
 			}
 			
 			if (index < cuboids.lastIndex) {
-				val nextLength = cuboids[index + 1][2]
+				val (_, _, nextLength) = cuboids[index + 1]
 				pivotZ += (length + nextLength) * 0.5f
 			}
 		}
@@ -36,7 +36,7 @@ object EndermiteEntityModel: CompositeEntityModel<EndermiteEntity>() {
 	
 	override fun getParts() = modelParts
 	
-	override fun setAngles(entity: EndermiteEntity, limbsDistance: Float, limbsPitch: Float, partialCycle: Float, yaw: Float, pitch: Float) {
+	override fun setAngles(goodmiteEntity: GoodmiteEntity, limbsDistance: Float, limbsPitch: Float, partialCycle: Float, yaw: Float, pitch: Float) {
 		val pi = PI.toFloat()
 		
 		modelParts.forEachIndexed { index, modelPart ->
